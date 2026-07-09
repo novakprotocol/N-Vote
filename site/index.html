@@ -18,8 +18,10 @@
   </header>
 
   <nav class="actions" aria-label="N-Vote actions">
-    <a class="button primary" href="https://github.com/novakprotocol/N-Vote/issues/new?template=feature_request.yml" target="_blank" rel="noopener">Submit request</a>
+    <a class="button primary" href="https://github.com/novakprotocol/N-Vote/issues/new?template=application_request.yml" target="_blank" rel="noopener">Submit application request</a>
+    <a class="button" href="https://github.com/novakprotocol/N-Vote/issues/new?template=feature_request.yml" target="_blank" rel="noopener">Submit request</a>
     <a class="button" href="https://github.com/novakprotocol/N-Vote/issues" target="_blank" rel="noopener">Open request</a>
+    <a class="button" href="#application-requests">View application requests</a>
     <a class="button" href="#friday-top5">View Friday top 5</a>
     <a class="button" href="#approved-now">View approved now</a>
     <a class="button" href="https://github.com/novakprotocol/N-Vote/blob/main/docs/PUBLIC_PRIVATE_BOUNDARY.md" target="_blank" rel="noopener">Read public/private boundary</a>
@@ -32,6 +34,12 @@
       <div id="area-cards" class="cards" aria-live="polite"></div>
     </section>
 
+    <section id="application-requests">
+      <h2>Application requests</h2>
+      <p>Public-safe intake for app, web app, game, overlay, docs, and other app-like requests. These requests can rank in Friday top 5, but they do not trigger private implementation work.</p>
+      <div id="application-request-cards" class="stack" aria-live="polite"></div>
+    </section>
+
     <section>
       <h2>Requests</h2>
       <div class="table-wrap">
@@ -40,6 +48,7 @@
             <tr>
               <th>Rank</th>
               <th>Area</th>
+              <th>Type</th>
               <th>Title</th>
               <th>Issue</th>
               <th>Status</th>
@@ -64,7 +73,7 @@
 
     <section id="approved-now">
       <h2>Approved Now</h2>
-      <p>Private packet status is public-marker-only. N-Vote does not expose private implementation plans.</p>
+      <p>Approved-now is public-marker-only. N-Vote does not expose private implementation plans.</p>
       <div id="approved-list" class="stack"></div>
     </section>
   </main>
