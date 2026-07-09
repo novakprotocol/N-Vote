@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">N-Vote logo</title>
+  <desc id="desc">A stylized N with a public vote check mark.</desc>
+  <rect width="256" height="256" rx="56" fill="#0b1020"/>
+  <path d="M58 196V60h34l72 84V60h34v136h-34L92 112v84H58z" fill="#eef3ff"/>
+  <path d="M82 166l29 29 70-82" fill="none" stroke="#6f86ff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="198" cy="58" r="18" fill="#9fb3ff"/>
+</svg>
