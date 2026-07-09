@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: How voting works
+    url: https://github.com/novakprotocol/N-Vote/blob/main/docs/VOTING_MODEL.md
+    about: Read the public reaction score model.
+  - name: Public/private boundary
+    url: https://github.com/novakprotocol/N-Vote/blob/main/docs/PUBLIC_PRIVATE_BOUNDARY.md
+    about: Read what must not be posted publicly.
