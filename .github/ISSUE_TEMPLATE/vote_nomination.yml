@@ -1,0 +1,43 @@
+name: Vote nomination
+description: Nominate a public request for Friday Top 5 attention.
+title: "[Vote nomination]: "
+labels: ["type:question", "status:submitted", "do-not-implement-directly"]
+body:
+  - type: input
+    id: issue_number
+    attributes:
+      label: Issue number
+      placeholder: "#123"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - n-suite
+        - overlay
+        - n-idea
+        - n-g-games
+        - n-g-chess
+        - n-g-pegsolitaire
+        - local-bridge
+        - docs
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Public-safe reason
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary
+      options:
+        - label: I understand comments are not counted as votes in v1; issue reactions are the vote signal.
+          required: true
+        - label: I understand owner approval is required before private implementation work.
+          required: true

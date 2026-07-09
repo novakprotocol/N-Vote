@@ -1,0 +1,7 @@
+{
+  "schema": "n-vote.public-data.v1",
+  "generated_at": "2026-07-09T04:06:00Z",
+  "source_repo": "novakprotocol/N-Vote",
+  "public_private_boundary": "Public-safe issue metadata and reaction totals only. Public output is never runner input. Owner approval is required before private implementation work.",
+  "records": []
+}

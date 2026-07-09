@@ -1,0 +1,71 @@
+{
+  "schema": "n-vote.public-data.v1",
+  "generated_at": "2026-07-09T04:06:00Z",
+  "source_repo": "novakprotocol/N-Vote",
+  "public_private_boundary": "Public-safe issue metadata and reaction totals only. Public output is never runner input. Owner approval is required before private implementation work.",
+  "records": [
+    {
+      "slug": "n-suite",
+      "display_name": "N-Suite",
+      "description": "Portfolio/status and overlay cockpit integration.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "overlay",
+      "display_name": "N-Suite Overlay",
+      "description": "Local cockpit/status/approval surface display needs.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "n-idea",
+      "display_name": "N-Idea",
+      "description": "Product recon and build/no-build routing requests.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "n-g-games",
+      "display_name": "N-G Games",
+      "description": "Public game request area for N-G family ideas.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "n-g-chess",
+      "display_name": "N-G Chess",
+      "description": "Public request area for chess-family improvements.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "n-g-pegsolitaire",
+      "display_name": "N-G PegSolitaire",
+      "description": "Public request area for peg-solitaire improvements.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "local-bridge",
+      "display_name": "Local Bridge",
+      "description": "Public-safe requests about local bridge status surfaces.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "docs",
+      "display_name": "Docs",
+      "description": "Docs, teaching, handoff, and public boundary requests.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    },
+    {
+      "slug": "other",
+      "display_name": "Other",
+      "description": "Public-safe N-Stack request that does not fit another area.",
+      "open_request_count": 0,
+      "top_request_count": 0
+    }
+  ]
+}

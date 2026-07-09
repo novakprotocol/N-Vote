@@ -1,0 +1,102 @@
+name: Feature request
+description: Public-safe request for N-Stack/N-Suite.
+title: "[Feature]: "
+labels: ["type:feature", "status:submitted", "do-not-implement-directly"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - n-suite
+        - overlay
+        - n-idea
+        - n-g-games
+        - n-g-chess
+        - n-g-pegsolitaire
+        - local-bridge
+        - docs
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - feature
+        - improvement
+        - docs
+        - question
+        - bug-related
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One public-safe sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Public-safe problem statement only.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_outcome
+    attributes:
+      label: Proposed outcome
+      description: What should improve for users?
+    validations:
+      required: true
+  - type: textarea
+    id: user_value
+    attributes:
+      label: User value
+      description: Why would this matter?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence_or_example
+    attributes:
+      label: Evidence or example
+      description: Public-safe examples only.
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options:
+        - low
+        - normal
+        - high
+        - owner-review-needed
+    validations:
+      required: true
+  - type: textarea
+    id: public_safe_details
+    attributes:
+      label: Public-safe details only
+      description: Do not include secrets, private repo internals, local personal paths, private receipts, private branches, or implementation plans.
+    validations:
+      required: true
+  - type: checkboxes
+    id: private_data_warning
+    attributes:
+      label: Private data warning checkbox
+      options:
+        - label: I confirm this request contains only public-safe information.
+          required: true
+        - label: I understand public votes do not directly trigger implementation work.
+          required: true
+  - type: checkboxes
+    id: acceptance_checklist
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: This request can be discussed publicly.
+          required: true
+        - label: Owner approval is still required before private implementation work.
+          required: true

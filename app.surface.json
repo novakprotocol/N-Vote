@@ -1,0 +1,110 @@
+{
+  "schema": "n-app.surface.v1",
+  "app": "N-Vote",
+  "menu_contract_only": true,
+  "commands": [
+    {
+      "id": "n-vote.open_site",
+      "title": "Open N-Vote site",
+      "description": "Open the public GitHub Pages board.",
+      "risk": "low",
+      "mutates_state": false,
+      "requires_approval": false,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "public display only",
+      "network_scope": "public GitHub Pages",
+      "secrets_scope": "none"
+    },
+    {
+      "id": "n-vote.submit_request",
+      "title": "Submit request",
+      "description": "Open the GitHub issue form for public request intake.",
+      "risk": "low",
+      "mutates_state": false,
+      "requires_approval": false,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "opens public issue form only",
+      "network_scope": "public GitHub Issues",
+      "secrets_scope": "none"
+    },
+    {
+      "id": "n-vote.view_top5",
+      "title": "View Friday top 5",
+      "description": "Display Friday top-5 public JSON.",
+      "risk": "low",
+      "mutates_state": false,
+      "requires_approval": false,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "public data read only",
+      "network_scope": "public GitHub Pages data",
+      "secrets_scope": "none"
+    },
+    {
+      "id": "n-vote.view_approved_now",
+      "title": "View approved now",
+      "description": "Display public approved-now markers without private packets.",
+      "risk": "low",
+      "mutates_state": false,
+      "requires_approval": false,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "public marker read only",
+      "network_scope": "public GitHub Pages data",
+      "secrets_scope": "none"
+    },
+    {
+      "id": "n-vote.refresh_public_data",
+      "title": "Refresh public data",
+      "description": "Trigger or inspect public data refresh only; no private packets and no implementation work.",
+      "risk": "medium",
+      "mutates_state": true,
+      "requires_approval": true,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "public JSON refresh only",
+      "network_scope": "N-Vote public GitHub API only",
+      "secrets_scope": "GITHUB_TOKEN inside GitHub Actions only"
+    },
+    {
+      "id": "n-vote.copy_private_handoff_stub",
+      "title": "Copy private handoff stub",
+      "description": "Copy text that an owner can paste into an approved private recon workflow. This does not start execution and does not mutate private repos.",
+      "risk": "medium",
+      "mutates_state": false,
+      "requires_approval": true,
+      "dry_run_supported": true,
+      "redacts_output": true,
+      "authority_scope": "clipboard text only",
+      "network_scope": "none",
+      "secrets_scope": "none"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "n-vote.board",
+      "label": "Public board",
+      "commands": [
+        "n-vote.open_site",
+        "n-vote.submit_request",
+        "n-vote.view_top5",
+        "n-vote.view_approved_now"
+      ]
+    },
+    {
+      "id": "n-vote.owner-actions",
+      "label": "Owner-gated copy/display actions",
+      "commands": [
+        "n-vote.refresh_public_data",
+        "n-vote.copy_private_handoff_stub"
+      ]
+    }
+  ],
+  "boundary_notes": [
+    "copy_private_handoff_stub is a text handoff only.",
+    "No runner execution.",
+    "No private repo mutation."
+  ]
+}
