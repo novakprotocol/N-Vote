@@ -1,0 +1,43 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate public site data
+        run: |
+          python scripts/check_public_boundary.py
+          python scripts/check_data_contract.py
+      - name: Prepare artifact
+        run: |
+          mkdir -p _site
+          cp -R site/. _site/
+          cp -R data _site/data
+          cp docs/PUBLIC_PRIVATE_BOUNDARY.md _site/PUBLIC_PRIVATE_BOUNDARY.md
+          cp docs/VOTING_MODEL.md _site/VOTING_MODEL.md
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
