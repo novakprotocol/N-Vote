@@ -1,0 +1,80 @@
+name: Application request
+description: Public-safe request for a new app, web app, game, overlay feature, docs surface, or other app-like idea.
+title: "[Application request]: "
+labels: ["request", "type:application-request", "status:submitted", "area:application-request", "do-not-implement-directly"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public intake only. Do not include secrets, tokens, private repo internals, local personal paths, private receipts, private branch names, customer or private data, or implementation instructions. Public votes do not trigger private implementation work.
+  - type: dropdown
+    id: request_kind
+    attributes:
+      label: Request kind
+      options:
+        - app
+        - web app
+        - game
+        - overlay
+        - docs
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: target_family
+    attributes:
+      label: Target family
+      options:
+        - N-Suite
+        - N-Idea
+        - N-G
+        - N-A candidate
+        - N-Vote
+        - docs
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: launch_surface
+    attributes:
+      label: Requested launch surface
+      options:
+        - CLI
+        - GUI
+        - web
+        - GitHub Pages
+        - unknown
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One public-safe sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: user_value
+    attributes:
+      label: User value
+      description: Why would this matter to users?
+    validations:
+      required: true
+  - type: textarea
+    id: public_safe_constraints
+    attributes:
+      label: Constraints / public-safe notes
+      description: Public-safe constraints only. Do not include secrets, private repo details, private branches, local paths, private receipts, customer data, or implementation instructions.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_boundary
+    attributes:
+      label: Public boundary confirmation
+      options:
+        - label: I confirm this request contains only public-safe information.
+          required: true
+        - label: I understand public votes do not directly trigger implementation work.
+          required: true
+        - label: I understand owner approval is required before private implementation work.
+          required: true

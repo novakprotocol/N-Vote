@@ -3,6 +3,7 @@
 ## Current features
 
 - Public GitHub Issues intake forms.
+- Public application-request intake for app, web app, game, overlay, docs, and other request kinds.
 - Public issue-reaction voting model.
 - Public data JSON contracts.
 - Static GitHub Pages web interface.
@@ -18,7 +19,7 @@
 - Richer moderation queue after owner review.
 - Label creation automation if explicitly approved.
 - Overlay panel implementation in N-Suite after this repo has review evidence.
-- Private recon packet creation flow outside public N-Vote after explicit owner approval.
+- Private recon handoff creation flow outside public N-Vote after explicit owner approval.
 
 ## Unsupported claims
 
