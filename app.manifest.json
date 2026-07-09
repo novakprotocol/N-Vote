@@ -1,0 +1,36 @@
+{
+  "schema": "n-app.manifest.v1",
+  "name": "N-Vote",
+  "repo": "novakprotocol/N-Vote",
+  "classification": [
+    "public web app",
+    "GitHub Pages static site",
+    "GitHub Issues intake surface",
+    "public voting board",
+    "N-Suite overlay read source"
+  ],
+  "not_a": [
+    "private implementation queue",
+    "runner trigger",
+    "private repo browser",
+    "secret store",
+    "production-control surface"
+  ],
+  "entrypoints": {
+    "site": "https://novakprotocol.github.io/N-Vote/",
+    "issues": "https://github.com/novakprotocol/N-Vote/issues"
+  },
+  "commands": [
+    "n-vote.open_site",
+    "n-vote.submit_request",
+    "n-vote.view_top5",
+    "n-vote.view_approved_now",
+    "n-vote.refresh_public_data",
+    "n-vote.copy_private_handoff_stub"
+  ],
+  "security": {
+    "public_private_boundary": "Public votes do not directly trigger implementation work. Owner approval is required before any request becomes private work.",
+    "secrets": "none in repo; GITHUB_TOKEN only inside GitHub Actions workflows"
+  },
+  "claim_boundary": "N-Vote is a public request and voting board candidate for N-Stack/N-Suite."
+}
