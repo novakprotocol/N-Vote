@@ -1,0 +1,58 @@
+{
+  "schema": "nstack.feature_ledger.v1",
+  "repo": "N-Vote",
+  "updated_at": "2026-07-09T04:05:10Z",
+  "features": [
+    {
+      "id": "public.issue_intake",
+      "name": "Public GitHub Issues intake",
+      "status": "current",
+      "summary": "Issue forms for requests, bugs, and vote nominations.",
+      "evidence": [
+        ".github/ISSUE_TEMPLATE/*.yml"
+      ],
+      "links": [],
+      "next_action": "Review forms in draft PR.",
+      "claim_boundary": "Public intake only."
+    },
+    {
+      "id": "public.voting",
+      "name": "Issue reaction voting",
+      "status": "current",
+      "summary": "Reaction weights and Friday scoring are documented and scriptable.",
+      "evidence": [
+        "docs/VOTING_MODEL.md",
+        "scripts/tally_votes.py"
+      ],
+      "links": [],
+      "next_action": "Review scoring behavior.",
+      "claim_boundary": "Votes do not trigger implementation."
+    },
+    {
+      "id": "public.site",
+      "name": "GitHub Pages static site",
+      "status": "current",
+      "summary": "Static site renders areas, requests, Friday Top 5, and Approved Now.",
+      "evidence": [
+        "site/index.html",
+        "site/app.js",
+        "site/style.css"
+      ],
+      "links": [],
+      "next_action": "Enable Pages source after review.",
+      "claim_boundary": "Site deployment not claimed until Pages settings and Actions evidence exist."
+    },
+    {
+      "id": "overlay.plan",
+      "name": "N-Suite overlay read plan",
+      "status": "future",
+      "summary": "Overlay reads public JSON only and exposes open/copy/display actions.",
+      "evidence": [
+        "docs/OVERLAY_INTEGRATION.md"
+      ],
+      "links": [],
+      "next_action": "Review after N-Vote PR evidence.",
+      "claim_boundary": "No N-Suite integration claim yet."
+    }
+  ]
+}
