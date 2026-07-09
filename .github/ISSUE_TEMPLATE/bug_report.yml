@@ -1,0 +1,52 @@
+name: Bug report
+description: Public-safe bug report for N-Vote or public N-Stack request surfaces.
+title: "[Bug]: "
+labels: ["type:bug", "status:submitted", "do-not-implement-directly"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - n-suite
+        - overlay
+        - n-idea
+        - n-g-games
+        - n-g-chess
+        - n-g-pegsolitaire
+        - local-bridge
+        - docs
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Public-safe summary of the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: public_safe_evidence
+    attributes:
+      label: Public-safe evidence
+      description: Do not include secrets, private repo internals, local personal paths, private receipts, private branches, or implementation plans.
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary
+      options:
+        - label: I confirm this report contains only public-safe information.
+          required: true
