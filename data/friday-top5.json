@@ -1,16 +1,89 @@
 {
-  "schema": "n-vote.public-data.v1",
-  "generated_at": "2026-07-09T04:06:00Z",
-  "source_repo": "novakprotocol/N-Vote",
-  "public_private_boundary": "Public-safe issue metadata and reaction totals only. Public output is never runner input. Owner approval is required before private implementation work.",
+  "generated_at": "2026-07-09T15:35:00Z",
+  "public_private_boundary": "Public issues and reactions are public signals only. Owner approval is required before private work.",
   "records": [
     {
       "scope": "overall",
-      "records": []
+      "top5": [
+        {
+          "area": "application-request",
+          "issue_number": 2,
+          "labels": [
+            "request",
+            "area:public-intake",
+            "area:application-request"
+          ],
+          "opened_at": "2026-07-09T15:19:24Z",
+          "public_routing": {
+            "approved_now_requires_owner_approval": true,
+            "friday_top5": true
+          },
+          "reactions": {
+            "+1": 0,
+            "-1": 0,
+            "eyes": 0,
+            "heart": 0,
+            "rocket": 0
+          },
+          "request_kinds_supported": [
+            "app",
+            "web app",
+            "game",
+            "overlay",
+            "docs",
+            "other"
+          ],
+          "request_type": "application-request",
+          "score": 0.0,
+          "state": "open",
+          "status": "status:submitted",
+          "title": "Add application-request intake area to public vote board",
+          "url": "https://github.com/novakprotocol/N-Vote/issues/2"
+        }
+      ]
     },
     {
-      "scope": "per-area",
-      "records": []
+      "area": "application-request",
+      "scope": "area",
+      "top5": [
+        {
+          "area": "application-request",
+          "issue_number": 2,
+          "labels": [
+            "request",
+            "area:public-intake",
+            "area:application-request"
+          ],
+          "opened_at": "2026-07-09T15:19:24Z",
+          "public_routing": {
+            "approved_now_requires_owner_approval": true,
+            "friday_top5": true
+          },
+          "reactions": {
+            "+1": 0,
+            "-1": 0,
+            "eyes": 0,
+            "heart": 0,
+            "rocket": 0
+          },
+          "request_kinds_supported": [
+            "app",
+            "web app",
+            "game",
+            "overlay",
+            "docs",
+            "other"
+          ],
+          "request_type": "application-request",
+          "score": 0.0,
+          "state": "open",
+          "status": "status:submitted",
+          "title": "Add application-request intake area to public vote board",
+          "url": "https://github.com/novakprotocol/N-Vote/issues/2"
+        }
+      ]
     }
-  ]
+  ],
+  "schema": "n-vote.public-data.v1.friday_top5",
+  "source_repo": "novakprotocol/N-Vote"
 }
