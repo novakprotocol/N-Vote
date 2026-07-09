@@ -27,5 +27,5 @@ except Exception as e:
 write("requests.json",records)
 write("votes.json",[{"issue_number":x["issue_number"],"reactions":x["reactions"],"score":x["score"]} for x in records])
 write("public-roadmap.json",[x for x in records if any(l in x.get("labels",[]) for l in ["status:approved-public","approved-now"])])
-write("approved-now.json",[dict(x, private_packet_status="public-markex-only") for x in records if "approved-now" in x.get("labels",[])])
+write("approved-now.json",[dict(x, private_packet_status="public-marker-only") for x in records if "approved-now" in x.get("labels",[])])
 print("Built public data")
