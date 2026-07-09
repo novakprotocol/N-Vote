@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>N-Vote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/n-vote-logo.svg" alt="N-Vote logo" class="logo">
+    <div>
+      <p class="eyebrow">N-Stack public intake</p>
+      <h1>N-Vote</h1>
+      <p class="subtitle">Public request and voting board for N-Stack</p>
+      <p class="boundary"><strong>Claim boundary:</strong> N-Vote is a public request and voting board candidate for N-Stack/N-Suite. Public votes do not start implementation work. Owner approval is required before any request becomes private work.</p>
+    </div>
+  </header>
+
+  <nav class="actions" aria-label="N-Vote actions">
+    <a class="button primary" href="https://github.com/novakprotocol/N-Vote/issues/new?template=feature_request.yml" target="_blank" rel="noopener">Submit request</a>
+    <a class="button" href="https://github.com/novakprotocol/N-Vote/issues" target="_blank" rel="noopener">Open request</a>
+    <a class="button" href="#friday-top5">View Friday top 5</a>
+    <a class="button" href="#approved-now">View approved now</a>
+    <a class="button" href="https://github.com/novakprotocol/N-Vote/blob/main/docs/PUBLIC_PRIVATE_BOUNDARY.md" target="_blank" rel="noopener">Read public/private boundary</a>
+    <a class="button" href="https://github.com/novakprotocol/N-Vote/blob/main/docs/VOTING_MODEL.md" target="_blank" rel="noopener">Read how voting works</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Areas</h2>
+      <div id="area-cards" class="cards" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>Requests</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Area</th>
+              <th>Title</th>
+              <th>Issue</th>
+              <th>Status</th>
+              <th>Score</th>
+              <th>+1</th>
+              <th>Heart</th>
+              <th>Rocket</th>
+              <th>Eyes</th>
+              <th>Opened</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="request-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="friday-top5">
+      <h2>Friday Top 5</h2>
+      <div id="top5" class="stack"></div>
+    </section>
+
+    <section id="approved-now">
+      <h2>Approved Now</h2>
+      <p>Private packet status is public-marker-only. N-Vote does not expose private implementation plans.</p>
+      <div id="approved-list" class="stack"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Voting happens on GitHub Issues with public issue reactions. There is no custom login or token-based voting in v1.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
