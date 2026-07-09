@@ -1,71 +1,86 @@
 {
-  "schema": "n-vote.public-data.v1",
-  "generated_at": "2026-07-09T04:06:00Z",
-  "source_repo": "novakprotocol/N-Vote",
-  "public_private_boundary": "Public-safe issue metadata and reaction totals only. Public output is never runner input. Owner approval is required before private implementation work.",
+  "generated_at": "2026-07-09T15:35:00Z",
+  "public_private_boundary": "Public issues and reactions are public signals only. Owner approval is required before private work.",
   "records": [
     {
-      "slug": "n-suite",
-      "display_name": "N-Suite",
+      "description": "Public-safe requests for apps, web apps, games, overlay features, docs, or other app-like ideas.",
+      "display_name": "Application Requests",
+      "open_request_count": 1,
+      "request_kinds": [
+        "app",
+        "web app",
+        "game",
+        "overlay",
+        "docs",
+        "other"
+      ],
+      "slug": "application-request",
+      "top_request_count": 1
+    },
+    {
       "description": "Portfolio/status and overlay cockpit integration.",
+      "display_name": "N-Suite",
       "open_request_count": 0,
+      "slug": "n-suite",
       "top_request_count": 0
     },
     {
-      "slug": "overlay",
-      "display_name": "N-Suite Overlay",
       "description": "Local cockpit/status/approval surface display needs.",
+      "display_name": "N-Suite Overlay",
       "open_request_count": 0,
+      "slug": "overlay",
       "top_request_count": 0
     },
     {
-      "slug": "n-idea",
-      "display_name": "N-Idea",
       "description": "Product recon and build/no-build routing requests.",
+      "display_name": "N-Idea",
       "open_request_count": 0,
+      "slug": "n-idea",
       "top_request_count": 0
     },
     {
-      "slug": "n-g-games",
-      "display_name": "N-G Games",
       "description": "Public game request area for N-G family ideas.",
+      "display_name": "N-G Games",
       "open_request_count": 0,
+      "slug": "n-g-games",
       "top_request_count": 0
     },
     {
-      "slug": "n-g-chess",
-      "display_name": "N-G Chess",
       "description": "Public request area for chess-family improvements.",
+      "display_name": "N-G Chess",
       "open_request_count": 0,
+      "slug": "n-g-chess",
       "top_request_count": 0
     },
     {
-      "slug": "n-g-pegsolitaire",
-      "display_name": "N-G PegSolitaire",
       "description": "Public request area for peg-solitaire improvements.",
+      "display_name": "N-G PegSolitaire",
       "open_request_count": 0,
+      "slug": "n-g-pegsolitaire",
       "top_request_count": 0
     },
     {
-      "slug": "local-bridge",
-      "display_name": "Local Bridge",
       "description": "Public-safe requests about local bridge status surfaces.",
+      "display_name": "Local Bridge",
       "open_request_count": 0,
+      "slug": "local-bridge",
       "top_request_count": 0
     },
     {
-      "slug": "docs",
-      "display_name": "Docs",
       "description": "Docs, teaching, handoff, and public boundary requests.",
+      "display_name": "Docs",
       "open_request_count": 0,
+      "slug": "docs",
       "top_request_count": 0
     },
     {
-      "slug": "other",
-      "display_name": "Other",
       "description": "Public-safe N-Stack request that does not fit another area.",
+      "display_name": "Other",
       "open_request_count": 0,
+      "slug": "other",
       "top_request_count": 0
     }
-  ]
+  ],
+  "schema": "n-vote.public-data.v1.areas",
+  "source_repo": "novakprotocol/N-Vote"
 }
